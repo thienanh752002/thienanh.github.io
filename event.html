@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./css/Team.css">
+  <!-- include template -->
+  <script src="./../js/html-import.min.js"></script>
+  <link rel="import" href="./Template/Template.html">
+  <!-- end inclue template -->
+
+  <title>Event</title>
+</head>
+
+<body>
+  <!-- nav header -->
+  <div id="headers"></div>
+  <!-- end nav header -->
+
+
+  <h2>SOME VIDEO GRADUATION ANNIVERSARY</h2>
+  <div id="container">
+    <div id="row">
+      <div class="col">
+        <div class="feature-img">
+          <img src="../Student/6.hs.jpg" width="100%" alt="" />
+          <img src="../LogoIcon/player.png" class="play-btn" onclick="playVideo('../media/NYUGraduate.mp4')" />
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="small-img-row">
+          <div class="small-img">
+            <img src="../Student/colm.jpg" alt="" />
+            <img src="../LogoIcon/player.png" class="play-btn" onclick="playVideo('../media/ColumbiaGraduate.mp4')" />
+          </div>
+          <p>Columbia University Graduation Ceremony.</p>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="small-img-row">
+          <div class="small-img">
+            <img src="../Student/commence-3.jpg" height="110" alt="" />
+            <img src="../LogoIcon/player.png" class="play-btn" onclick="playVideo('../media/FordhamGraduate.mp4')" />
+          </div>
+          <p>Fordham University Graduation Ceremony.</p>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="small-img-row">
+          <div class="small-img">
+            <img src="../Student/cityuni.jpg" alt="" />
+            <img src="../LogoIcon/player.png" class="play-btn" onclick="playVideo('../media/CityUGraduate.mp4')" />
+          </div>
+          <p>City University Graduation Ceremony.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="video-player" id="videoPlayer">
+    <video width="100%" controls autoplay loop id="myVideo">
+      <source src="" type="video/mp4">
+    </video>
+    <img src="../LogoIcon/close-button-png-2.jpg" class="close-btn" onclick="stopVideo()">
+  </div>
+
+
+  <!-- Footer -->
+  <div id="footers"></div>
+  <!-- End  Footer-->
+
+  <script>
+    var videoPlayer = document.getElementById("videoPlayer");
+    var myVideo = document.getElementById("myVideo");
+    function stopVideo() {
+      videoPlayer.style.display = "none";
+    }
+    function playVideo(file) {
+      myVideo.src = file;
+      videoPlayer.style.display = "block";
+    }
+  </script>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+</html>
